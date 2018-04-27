@@ -5,6 +5,10 @@ Steps to initialize:
 // Creating an empty graph for nodes
 ~graph = TopNodeGraph.new();
 
+// Adding SuperCollider nodes
+~node0 = PolySO.newDefault(\tesxi, 1);
+~graph.addOrigin(~node0, [0,0]);
+
 // Adding Ableton Live node
 ~liveMidiBus = MIDIOut(0);
 ~node1 = PolyLiveSurf.newDefault(~liveMidiBus);
