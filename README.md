@@ -123,9 +123,10 @@ Steps to initialize:
 
 ~algs.genAlgs.put('default rand. walk (1%)', ~genAlg1);
 
-// Bridge connects SuperCollider to PolyTop Android gui
+// Bridge connects SuperCollider to PolyTop Android GUI
 ~bridge = TopBridge.new("192.168.8.181", ~graph, ~algs);
-~algs.sync();
 
-~bridge.syncClient();
+// Make sure the client is started for this step and the IP addresses are correct
+~algs.sync(); // sync algs
+~bridge.syncClient(); // sync graph
 ```
